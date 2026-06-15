@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+
+:root {
+	--color-primary-default: #ffffff;
+    --color-primary-100: #DEDEDE;
+    --color-border-2: #DEDEDE ;
+
+    --color-background-default: #F6F6F6;
+    --color-background-secondary: #A5A6AB;
+    --color-background-button: #F5F5F5;
+    
+    --color-text-primary: #2A2A2A;
+    --color-text-secondary: #999999;
+    --color-text-acsent: #93D100;
+
+    --font-manrope: 'Manrope', sans-serif;
+    --font-urbanist: 'Urbanist', sans-serif;
+}
+
+@theme inline{
+  --color-border: var(--color-primary-100 );
+  --color-background-default: var(--color-background-default );
+  --color-background-secondary: var(--color-background-secondary );
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-acsent: var(--color-text-acsent);
+
+    --color-border-secondary: var(--color-border-2);
+    --color-background-button: var(--color-background-button);
+
+  --font-manrope: var(--font-manrope);
+  --font-urbanist: var(--font-urbanist);
+}
+
+@utility text-xs-medium{ 
+  @apply text-xs font-medium leading-[138%];
+}
+@utility text-xs-bold{ 
+  @apply text-xs font-bold leading-[138%];
+}
+@utility text-sm-bold{ 
+  @apply text-sm font-bold leading-[138%];
+}
+@utility text-sm-medium{ 
+  @apply text-sm font-medium leading-[138%];
+}
+
+@utility text-5xl-reg{ 
+  @apply text-5xl font-normal leading-[138%];
+}
+
+@utility text-base-bold{ 
+  @apply text-base font-bold leading-[138%];
+}

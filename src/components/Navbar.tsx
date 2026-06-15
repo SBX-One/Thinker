@@ -1,0 +1,21 @@
+import ThinkerLogo from "../assets/svg/Thinker.svg"
+export default function Navbar() {
+  return (
+		<div className="p-12 flex justify-between border border-b-border ">
+			<img src={ThinkerLogo} alt="Thinker" />
+
+			{/* burger menu  */}
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				className="w-6"
+				viewBox="0 0 24 24"
+			>
+				<path d="M0 0h24v24H0z" fill="none" />
+				<path
+					fill="currentColor"
+					d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1"
+				/>
+			</svg>
+		</div>
+  );
+}
