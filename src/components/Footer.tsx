@@ -1,5 +1,6 @@
 import HeroLogo from "../assets/svg/ThinkerHero.svg";
-import Work1 from "../assets/images/Rectangle 17936.png";
+import Work5 from "../assets/images/Rectangle 17936-3.png";
+import Work6 from "../assets/images/Rectangle 17936-4.png";
 
 export default function Footer() {
 	return (
@@ -12,7 +13,7 @@ export default function Footer() {
 					<div className="absolute top-5 left-5 w-full h-full bg-[#BCFF1F]  border-r-2 border-b-2 border-black z-0" />
 
 					{/* White Contact Info Card */}
-					<div className="relative bg-white border border-border px-5 pt-5  pb-20 flex flex-col gap-6 text-left z-10">
+					<div className="relative bg-white border border-border px-5 pt-5   md:pb-20 flex flex-col gap-6 text-left z-10">
 						<span className="text-xs-bold text-text-secondary md:text-base-bold">
 							Contact
 						</span>
@@ -91,39 +92,35 @@ export default function Footer() {
 				{/* Center vertical grid line */}
 				<div className="absolute left-1/2 top-0 bottom-0 w-px bg-border z-0" />
 
+				{/* Full-width horizontal divider line */}
+				<div className="absolute left-0 right-0 bottom-16 h-px bg-border z-0" />
+
 				{/* Left Column (Column 1) */}
-				<div className="flex flex-col justify-between py-16 pl-12 pr-12 relative z-10 min-h-[580px]">
-					{/* Top: Stacked lake image */}
-					<div className="relative w-72 aspect-[158/100] select-none">
-						{/* Blue background box (offset top-left) */}
-						<div className="absolute top-0 left-0 w-[85%] h-[85%] bg-[#4A90E2]" />
-						{/* Mountain image (offset bottom-right) */}
+				<div className="flex flex-col justify-between py-16 pl-12 pr-12 relative z-10 min-h-[580px]" data-anim="footer-left">
+					{/* Top: Stacked image like in Hero */}
+					<div className="relative w-fit h-fit select-none">
+						<img src={Work5} className="" alt="" />
 						<img
-							src={Work1}
-							alt="Mountain Lake"
-							className="absolute bottom-0 right-0 w-[85%] h-[85%] object-cover border border-border"
+							src={Work6}
+							className="absolute left-1/12 top-1/12"
+							alt=""
 						/>
 					</div>
 
 					{/* Bottom: Thinker Logo + Green Dot */}
 					<div className="relative flex items-center w-full mt-16">
-						<img src={HeroLogo} alt="Thinker Logo" className="w-[85%] h-auto select-none" />
-						{/* Green dot badge - positioned exactly on the center line */}
-						<div className="absolute right-0 w-6 h-6 bg-[#93D100] rounded-full translate-x-1/2 z-20" />
+						<img src={HeroLogo} alt="Thinker Logo" className="w-full h-full" />
 					</div>
 				</div>
 
 				{/* Right Column (Column 2) */}
-				<div className="flex flex-col justify-between py-16 pl-12 pr-12 relative z-10 min-h-[580px]">
+				<div className="flex flex-col justify-between py-16 pl-12 pr-12 relative z-10 min-h-[580px]" data-anim="footer-right">
 					{/* Top: Contact Card with offset green grid pattern */}
-					<div className="relative w-full max-w-[450px] z-10">
+					<div className="relative w-full max-w-[450px] z-10" data-anim="footer-card">
 						{/* Offset green box with grid pattern background */}
 						<div
-							className="absolute top-5 left-5 w-full h-full bg-[#BCFF1F] border border-black z-0"
-							style={{
-								backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.15) 1px, transparent 1px)',
-								backgroundSize: '20px 20px'
-							}}
+							className="absolute top-5 left-5 w-full h-full bg-[#BCFF1F] border-b-2 border-r-2 border-black z-0"
+							
 						/>
 						{/* White Contact Card */}
 						<div className="relative bg-white border border-black px-8 py-8 flex flex-col gap-6 text-left z-10">
@@ -144,7 +141,7 @@ export default function Footer() {
 					</div>
 
 					{/* Bottom: Button Group (right-aligned) */}
-					<div className="flex flex-row justify-end gap-4 w-full z-10 mt-16 pr-4">
+					<div className="flex flex-row justify-end gap-4 w-full z-10 mt-16 pr-4 pb-6" data-anim="footer-btns">
 						{/* Social Media Pill */}
 						<button className="flex items-center group">
 							<span className="w-max font-urbanist text-xs md:text-sm font-bold leading-[1.38] border border-border bg-background-button pl-6 pr-10 py-4 rounded-full text-text-primary hover:bg-neutral-50 transition-colors cursor-pointer">
