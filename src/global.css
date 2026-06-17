@@ -23,6 +23,40 @@ iframe {
     max-width: 100%;
 }
 
+/* ── prefers-reduced-motion safeguard ───────────────────────────────────────
+   When the user has requested reduced motion in their OS/browser settings,
+   collapse all CSS transitions & animations to near-instant so they aren't
+   disorienting. GSAP hooks also respect this via a JS check.
+─────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ── Accessible focus-visible ring ──────────────────────────────────────────
+   Visible ring only for keyboard users (not mouse clicks).
+─────────────────────────────────────────────────────────────────────────── */
+:focus-visible {
+    outline: 2px solid #93D100;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* ── Button interactive base ─────────────────────────────────────────────────
+   transform-origin centered; will-change added/removed by JS.
+─────────────────────────────────────────────────────────────────────────── */
+.btn-interactive {
+    transform-origin: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
 :root {
 	--color-primary-default: #ffffff;
@@ -75,4 +109,14 @@ iframe {
 
 @utility text-base-bold{ 
   @apply text-base font-bold leading-[138%];
+}
+
+/* ── SVG Nav Underline Draw ────────────────────────────────────────────────── */
+.nav-link-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.3s ease-out;
+}
+.group:hover .nav-link-path {
+  stroke-dashoffset: 0;
 }

@@ -146,7 +146,20 @@ function Navbar() {
 							className="text-base font-medium relative cursor-pointer group font-urbanist"
 						>
 							{link.label}
-							<span className="absolute -bottom-0.5 left-0 h-[2px] w-0 bg-text-primary transition-all duration-300 group-hover:w-full rounded-full" />
+							<svg
+								className="absolute -bottom-1 left-0 w-full h-[2px] overflow-visible pointer-events-none"
+								viewBox="0 0 100 2"
+								preserveAspectRatio="none"
+								aria-hidden="true"
+							>
+								<path
+									d="M 0,1 L 100,1"
+									stroke="currentColor"
+									strokeWidth="2"
+									strokeLinecap="round"
+									className="nav-link-path"
+								/>
+							</svg>
 						</p>
 					))}
 				</div>

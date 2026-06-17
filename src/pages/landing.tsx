@@ -10,14 +10,22 @@ import CallToActionSection from "../components/landing/CallToActionSection";
 import JournalSection from "../components/landing/JournalSection";
 import LoadingScreen from "../components/LoadingScreen";
 import { useScrollAnimations } from "../hooks/useScrollAnimations";
+import { useButtonMicrointeractions } from "../hooks/useButtonMicrointeractions";
+import { useMouseParallax } from "../hooks/useMouseParallax";
+import { useTiltCards } from "../hooks/useTiltCards";
+import ScrollProgressBar from "../components/ScrollProgressBar";
  
 function Landing() {
 	const [isLoading, setIsLoading] = useState(true);
 	useScrollAnimations(!isLoading);
+	useButtonMicrointeractions(!isLoading);
+	useMouseParallax(!isLoading);
+	useTiltCards(!isLoading);
  
 	return (
 		<div className="w-full">
 			{isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+			{!isLoading && <ScrollProgressBar />}
 			<Navbar />
 
 			{/* Hero Section */}

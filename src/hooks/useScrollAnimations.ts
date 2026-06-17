@@ -8,9 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 const LG = "(min-width: 1024px)";
 const MOBILE = "(max-width: 1023px)";
 
+// Respect the OS/browser prefers-reduced-motion setting.
+// When true, we skip complex animations entirely and use simple instant fades.
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 export function useScrollAnimations(enabled: boolean = true) {
   useEffect(() => {
     if (!enabled) return;
+
+    // For reduced-motion users: just ensure everything is visible (no animation jank)
+    if (prefersReducedMotion) {
+      document.querySelectorAll<HTMLElement>("[data-anim]").forEach((el) => {
+        el.style.opacity = "1";
+        el.style.transform = "none";
+        el.style.clipPath = "none";
+      });
+      return;
+    }
+
     const mm = gsap.matchMedia();
 
     /* ═══════════════════════════════════════════════════════════

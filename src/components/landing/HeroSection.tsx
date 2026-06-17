@@ -11,12 +11,12 @@ import Work6 from "../../assets/images/Rectangle 17936-4.png";
 
 function HeroSection() {
 	return (
-		<div className="h-screen relative w-full overflow-hidden lg:h-full bg-background-default">
+		<div className="h-screen relative w-full overflow-hidden lg:h-full bg-background-default" data-parallax-container>
 			<div className="h-full">
 				<div className="grid grid-rows-2 h-full w-full z-10 py-20 md:py-10 ">
 					<div className="grid justify-between  border-b-2 border-border lg:grid-cols-2">
 						<div className="grid justify-between">
-							<div className="hidden lg:flex relative w-fit h-fit">
+							<div className="hidden lg:flex relative w-fit h-fit" data-depth="0.20">
 								<img
 									src={Work5}
 									className=""
@@ -50,7 +50,7 @@ function HeroSection() {
 								meaningful, measurable, and human.
 							</p>
 
-							<div className="hidden md:grid grid-cols-2 w-1/5 h-1/2 gap-2 pr-5 lg:grid-cols-1 lg:h-3/4 lg:w-1/4 lg:aspect-auto">
+							<div className="hidden md:grid grid-cols-2 w-1/5 h-1/2 gap-2 pr-5 lg:grid-cols-1 lg:h-3/4 lg:w-1/4 lg:aspect-auto" data-depth="0.35">
 								<div
 									className="hidden lg:flex lg:relative -translate-y-9 translate-x-9"
 									data-anim="heroarrow"
@@ -136,6 +136,7 @@ function HeroSection() {
 				<div
 					className="absolute w-full left-0 bottom-0 z-1 lg:hidden"
 					data-anim="herobg"
+					data-depth="0.08"
 				>
 					<img
 						src={HeroBackground}
@@ -146,6 +147,7 @@ function HeroSection() {
 				<div
 					className="hidden absolute left-0 bottom-0 z-1 lg:flex w-full"
 					data-anim="herobg"
+					data-depth="0.08"
 				>
 					<img
 						src={DekstopHeroBackground}

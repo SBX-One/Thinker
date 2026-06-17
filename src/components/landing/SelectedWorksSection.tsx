@@ -91,7 +91,7 @@ function SelectedWorksSection() {
 			</div>
 
 			{/* Desktop Layout (lg and above) */}
-			<div className="hidden lg:grid w-full grid-cols-4 gap-5 px-8 py-20 relative">
+			<div className="hidden lg:grid w-full grid-cols-4 gap-5 px-8 py-20 relative" style={{ perspective: "1000px" }}>
 				{/* Grid Lines Overlay */}
 				
 
@@ -133,7 +133,7 @@ function SelectedWorksSection() {
 				{/* Column 1 */}
 				<div className="mt-16 flex flex-col gap-10 relative z-10">
 					{/* Item 1 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork1}
@@ -141,14 +141,14 @@ function SelectedWorksSection() {
 								alt="Lumine 1"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding / Web Design</span>
 						</div>
 					</div>
 
 					{/* Item 5 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork5}
@@ -156,7 +156,7 @@ function SelectedWorksSection() {
 								alt="Lumine 5"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding</span>
 						</div>
@@ -166,7 +166,7 @@ function SelectedWorksSection() {
 				{/* Column 2 */}
 				<div className="mt-16 flex flex-col gap-10 relative z-10">
 					{/* Item 2 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork2}
@@ -174,14 +174,14 @@ function SelectedWorksSection() {
 								alt="Lumine 2"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding / Web Design</span>
 						</div>
 					</div>
 
 					{/* Item 6 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork6}
@@ -189,7 +189,7 @@ function SelectedWorksSection() {
 								alt="Lumine 6"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding</span>
 						</div>
@@ -199,7 +199,7 @@ function SelectedWorksSection() {
 				{/* Column 3 */}
 				<div className="mt-16 flex flex-col gap-10 relative z-10">
 					{/* Item 3 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork3}
@@ -207,14 +207,14 @@ function SelectedWorksSection() {
 								alt="Lumine 3"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding / Web Design</span>
 						</div>
 					</div>
 
 					{/* Item 7 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork7}
@@ -222,7 +222,7 @@ function SelectedWorksSection() {
 								alt="Lumine 7"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding</span>
 						</div>
@@ -232,7 +232,7 @@ function SelectedWorksSection() {
 				{/* Column 4 */}
 				<div className="mt-16 flex flex-col gap-10 relative z-10">
 					{/* Item 4 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork4}
@@ -240,14 +240,14 @@ function SelectedWorksSection() {
 								alt="Lumine 4"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Web Design</span>
 						</div>
 					</div>
 
 					{/* Item 8 */}
-					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card">
+					<div className="flex flex-col gap-3 group cursor-pointer" data-anim="card" data-tilt>
 						<div className="w-full aspect-[158/100] bg-background-default overflow-hidden">
 							<img
 								src={DesktopWork8}
@@ -255,7 +255,7 @@ function SelectedWorksSection() {
 								alt="Lumine 8"
 							/>
 						</div>
-						<div className="flex justify-between text-xs font-semibold tracking-tight text-text-primary">
+						<div className="flex justify-between text-xs lg:text-sm font-semibold tracking-tight text-text-primary">
 							<span>Lumine</span>
 							<span className="text-text-secondary">Branding</span>
 						</div>
