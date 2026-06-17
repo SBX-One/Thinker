@@ -14,10 +14,15 @@ function HeroSection() {
 		<div className="h-screen relative w-full overflow-hidden lg:h-full bg-background-default">
 			<div className="h-full">
 				<div className="grid grid-rows-2 h-full w-full z-10 py-20 md:py-10 ">
-					<div className="grid justify-between lg:grid-cols-2">
+					<div className="grid justify-between  border-b-2 border-border lg:grid-cols-2">
 						<div className="grid justify-between">
 							<div className="hidden lg:flex relative w-fit h-fit">
-								<img src={Work5} className="" alt="" data-anim="heroimg" />
+								<img
+									src={Work5}
+									className=""
+									alt=""
+									data-anim="heroimg"
+								/>
 								<img
 									src={Work6}
 									className="absolute left-1/12 top-1/12"
@@ -25,9 +30,9 @@ function HeroSection() {
 									data-anim="heroimg"
 								/>
 							</div>
-							<div className="hidden lg:flex border-b-2 border-border h-full w-screen  items-end justify-start  ">
+							<div className="hidden lg:flex  h-full w-full items-end justify-start ">
 								<img
-									className="px-5 w-full lg:w-1/2"
+									className="px-5 w-screen "
 									src={HeroLogo}
 									alt="Thinker Logo"
 									data-anim="herologo"
@@ -36,14 +41,20 @@ function HeroSection() {
 						</div>
 
 						<div className="flex justify-between">
-							<p className="text-xs-medium text-text-secondary w-5/7 z-10 px-5  md:text-sm-medium md:w-3/8 lg:w-3/6 lg:text-text-primary lg:pt-18" data-anim="tagline">
+							<p
+								className="text-xs-medium text-text-secondary w-5/7 z-10 px-5  md:text-sm-medium md:w-3/8 lg:w-3/6 lg:text-text-primary lg:pt-18"
+								data-anim="tagline"
+							>
 								Thinker is a creative agency dedicated to
 								branding that delivers real outcomes,
 								meaningful, measurable, and human.
 							</p>
 
 							<div className="hidden md:grid grid-cols-2 w-1/5 h-1/2 gap-2 pr-5 lg:grid-cols-1 lg:h-3/4 lg:w-1/4 lg:aspect-auto">
-								<div className="hidden lg:flex lg:relative -translate-y-9 translate-x-9" data-anim="heroarrow">
+								<div
+									className="hidden lg:flex lg:relative -translate-y-9 translate-x-9"
+									data-anim="heroarrow"
+								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										className="absolute opacity-25 -translate-y-2 -translate-x-6 size-40"
@@ -68,14 +79,20 @@ function HeroSection() {
 										/>
 									</svg>
 								</div>
-								<div className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity" data-anim="herothumbnail">
+								<div
+									className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity"
+									data-anim="herothumbnail"
+								>
 									<img
 										src={Work1}
 										className="w-full h-full object-cover"
 										alt="Selected Work 1"
 									/>
 								</div>
-								<div className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity" data-anim="herothumbnail">
+								<div
+									className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity"
+									data-anim="herothumbnail"
+								>
 									<img
 										src={Work3}
 										className="w-full h-full object-cover"
@@ -83,14 +100,20 @@ function HeroSection() {
 									/>
 								</div>
 
-								<div className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity" data-anim="herothumbnail">
+								<div
+									className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity"
+									data-anim="herothumbnail"
+								>
 									<img
 										src={Work2}
 										className="w-full h-full object-cover"
 										alt="Selected Work 2"
 									/>
 								</div>
-								<div className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity" data-anim="herothumbnail">
+								<div
+									className="w-full overflow-hidden bg-background-default hover:opacity-95 transition-opacity"
+									data-anim="herothumbnail"
+								>
 									<img
 										src={Work4}
 										className="w-full h-full object-cover"
@@ -99,9 +122,9 @@ function HeroSection() {
 								</div>
 							</div>
 						</div>
-						<div className="border-b-2 border-border h-full w-screen flex items-end justify-end lg:justify-start lg:items-start lg:hidden">
+						<div className="border-b-2 border-border h-full w-full flex items-end justify-end lg:justify-start lg:items-start lg:hidden">
 							<img
-								className="px-5 w-full lg:w-1/2"
+								className="px-5 w-full"
 								src={HeroLogo}
 								alt="Thinker Logo"
 								data-anim="herologo-mobile"
@@ -110,10 +133,20 @@ function HeroSection() {
 					</div>
 				</div>
 
-				<div className="absolute w-full left-0 bottom-0 z-1 lg:hidden" data-anim="herobg">
-					<img src={HeroBackground} alt="" className="w-full object-cover" />
+				<div
+					className="absolute w-full left-0 bottom-0 z-1 lg:hidden"
+					data-anim="herobg"
+				>
+					<img
+						src={HeroBackground}
+						alt=""
+						className="w-full object-cover"
+					/>
 				</div>
-				<div className="hidden absolute left-0 bottom-0 z-1 lg:flex w-full" data-anim="herobg">
+				<div
+					className="hidden absolute left-0 bottom-0 z-1 lg:flex w-full"
+					data-anim="herobg"
+				>
 					<img
 						src={DekstopHeroBackground}
 						alt=""

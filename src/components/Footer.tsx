@@ -82,7 +82,7 @@ export default function Footer() {
 				</div>
 
 				{/* Footer Logo */}
-				<div className="w-screen px-5 z-10 mt-6">
+				<div className="w-full px-5 z-10 mt-6">
 					<img src={HeroLogo} className="w-full h-auto" alt="Thinker" />
 				</div>
 			</div>

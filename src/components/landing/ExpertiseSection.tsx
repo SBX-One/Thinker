@@ -84,7 +84,7 @@ function ExpertiseSection() {
 									<h3 className="text-base-bold text-text-primary">
 										Creativity First
 									</h3>
-									<div className="flex gap-4 text-sm-medium text-text-secondary whitespace-nowrap">
+									<div className="flex gap-4 text-sm-medium text-text-secondary flex-wrap">
 										<ul className="flex flex-col gap-2 list-none">
 											<li>• Design Direction</li>
 											<li>• Art Direction</li>
@@ -132,7 +132,7 @@ function ExpertiseSection() {
 									<h3 className="text-base-bold text-text-primary">
 										Web Development
 									</h3>
-									<div className="flex gap-4 text-sm-medium text-text-secondary whitespace-nowrap">
+									<div className="flex gap-4 text-sm-medium text-text-secondary flex-wrap">
 										<ul className="flex flex-col gap-2 list-none">
 											<li>• Design Direction</li>
 											<li>• Art Direction</li>
@@ -180,7 +180,7 @@ function ExpertiseSection() {
 									<h3 className="text-base-bold text-text-primary">
 										Strategy & Execution
 									</h3>
-									<div className="flex gap-4 text-sm-medium text-text-secondary whitespace-nowrap">
+									<div className="flex gap-4 text-sm-medium text-text-secondary flex-wrap">
 										<ul className="flex flex-col gap-2 list-none">
 											<li>• Design Direction</li>
 											<li>• Art Direction</li>

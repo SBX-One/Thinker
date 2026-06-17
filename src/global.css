@@ -5,6 +5,24 @@ body {
     font-family: "Manrope", sans-serif;
 }
 
+/* ── Global overflow safeguard ──────────────────────────────────────────────
+   Use `overflow-x: clip` instead of `hidden` so programmatic scroll
+   (e.g. GSAP, scrollIntoView) still works on the Y axis.
+   `max-width: 100%` on media prevents intrinsically-wide assets from
+   breaking layout.
+─────────────────────────────────────────────────────────────────────────── */
+html {
+    overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+}
+
 
 :root {
 	--color-primary-default: #ffffff;

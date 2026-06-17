@@ -24,8 +24,9 @@ function SelectedWorksSection() {
 						<span className="text-base-bold md:text-5xl-reg" data-anim="sec-title-num">02</span>
 						<div className="grid gap-4">
 							<p className="text-xs-bold md:text-base-bold items-end justify-end flex" data-anim="sec-title-text">Selected Works</p>
-							<div className="relative w-full z-10 flex justify-end md:justify-start" data-anim="sec-title-desc">
-								<div className="flex items-center gap-4 md:gap-8 text-xs-medium md:text-sm-medium md:-mx-12">
+							{/* FIX: removed md:-mx-12 negative margin; added overflow-x-auto to prevent overflow */}
+							<div className="relative w-full z-10 flex justify-end md:justify-start overflow-x-auto" data-anim="sec-title-desc">
+								<div className="flex items-center gap-4 md:gap-8 text-xs-medium md:text-sm-medium">
 									<span className="cursor-pointer hover:text-text-primary transition-colors">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
