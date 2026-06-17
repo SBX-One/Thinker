@@ -7,13 +7,24 @@ function ExpertiseSection() {
 				<div className="flex flex-col col-span-2 gap-4">
 					<div className="flex justify-between md:grid md:grid-cols-2 md:gap-5">
 						{/* Left: Number '03' on mobile, but on desktop it's Title + Description */}
-						<span className="text-base-bold md:hidden" data-anim="sec-title-num">03</span>
+						<span
+							className="text-base-bold md:hidden"
+							data-anim="sec-title-num"
+						>
+							03
+						</span>
 
 						<div className="hidden md:flex flex-col gap-6">
-							<h2 className="text-base-bold md:text-base-bold" data-anim="sec-title-text">
+							<h2
+								className="text-base-bold md:text-base-bold"
+								data-anim="sec-title-text"
+							>
 								Our Expertise
 							</h2>
-							<div className="flex flex-col gap-6 text-xs-medium text-text-secondary md:text-sm-medium" data-anim="sec-title-desc">
+							<div
+								className="flex flex-col gap-6 text-xs-medium text-text-secondary md:text-sm-medium"
+								data-anim="sec-title-desc"
+							>
 								<p>
 									We believe brands should go beyond
 									aesthetics and create genuine connections.
@@ -30,16 +41,27 @@ function ExpertiseSection() {
 
 						{/* Right: Title on mobile, but on desktop it's Number '03' */}
 						<div className="grid gap-4 md:hidden">
-							<p className="text-xs-bold" data-anim="sec-title-text">Our Expertise</p>
+							<p
+								className="text-xs-bold"
+								data-anim="sec-title-text"
+							>
+								Our Expertise
+							</p>
 						</div>
 
-						<span className="hidden md:block text-5xl-reg text-right font-normal" data-anim="sec-title-num">
+						<span
+							className="hidden md:block text-5xl-reg text-right font-normal"
+							data-anim="sec-title-num"
+						>
 							03
 						</span>
 					</div>
 
 					{/* Mobile Description */}
-					<div className="flex flex-col gap-6 text-xs-medium text-text-secondary md:hidden" data-anim="sec-title-desc">
+					<div
+						className="flex flex-col gap-6 text-xs-medium text-text-secondary md:hidden"
+						data-anim="sec-title-desc"
+					>
 						<p>
 							We believe brands should go beyond aesthetics and
 							create genuine connections. That’s why our process
@@ -207,7 +229,9 @@ function ExpertiseSection() {
 
 				{/* Column 1 */}
 				<div className="flex flex-col justify-between min-h-[560px] relative z-10">
-					<span className="text-5xl-reg" data-anim="sec-title-num">03</span>
+					<span className="text-5xl-reg" data-anim="sec-title-num">
+						03
+					</span>
 					<div className="relative w-full h-48 select-none">
 						<div className="absolute left-0 bottom-24 w-24 h-24 bg-[#EAEAEA]" />
 						<div className="absolute left-28 bottom-16 w-20 h-20 bg-[#EAEAEA]" />
@@ -217,15 +241,24 @@ function ExpertiseSection() {
 
 				{/* Column 2 */}
 				<div className="flex flex-col justify-between min-h-[560px] relative z-10 px-4">
-					<h3 className="text-base-bold text-text-primary pt-3" data-anim="sec-title-text">
+					<h3
+						className="text-base-bold text-text-primary pt-3"
+						data-anim="sec-title-text"
+					>
 						Our Expertise
 					</h3>
 					<div className="flex flex-col gap-4">
-						<span className="text-6xl md:text-7xl font-light text-text-acsent leading-none" data-anim="letter">
+						<span
+							className="text-6xl md:text-7xl font-light text-text-acsent leading-none"
+							data-anim="letter"
+						>
 							a
 						</span>
 						<div className="flex flex-col gap-4">
-							<h3 className="text-base-bold text-text-primary">
+							<h3
+								className="text-base-bold text-text-primary"
+								data-anim="letter"
+							>
 								Creativity First
 							</h3>
 							<ul className="text-sm-medium text-text-secondary flex flex-col gap-2 list-none">
@@ -241,17 +274,26 @@ function ExpertiseSection() {
 
 				{/* Column 3 */}
 				<div className="flex flex-col justify-between min-h-[560px] relative z-10">
-					<p className="text-sm-medium pt-3 max-w-[325px] px-4 text-text-primary" data-anim="sec-title-desc">
+					<p
+						className="text-sm-medium pt-3 max-w-[325px] px-4 text-text-primary"
+						data-anim="sec-title-desc"
+					>
 						We believe brands should go beyond aesthetics and create
 						genuine connections. That’s why our process combines
 						creativity with strategy.
 					</p>
 					<div className="flex flex-col gap-4 px-4">
-						<span className="text-6xl md:text-7xl font-light text-text-acsent leading-none" data-anim="letter">
+						<span
+							className="text-6xl md:text-7xl font-light text-text-acsent leading-none"
+							data-anim="letter"
+						>
 							b
 						</span>
 						<div className="flex flex-col gap-4">
-							<h3 className="text-base-bold text-text-primary">
+							<h3
+								className="text-base-bold text-text-primary"
+								data-anim="letter"
+							>
 								Web Development
 							</h3>
 							<ul className="text-sm-medium text-text-secondary flex flex-col gap-2 list-none">
@@ -273,11 +315,17 @@ function ExpertiseSection() {
 						<div className="absolute right-0 top-28 w-16 h-16 bg-[#EAEAEA]" />
 					</div>
 					<div className="flex flex-col gap-4 px-4">
-						<span className="text-6xl md:text-7xl font-light text-text-acsent leading-none" data-anim="letter">
+						<span
+							className="text-6xl md:text-7xl font-light text-text-acsent leading-none"
+							data-anim="letter"
+						>
 							c
 						</span>
 						<div className="flex flex-col gap-4">
-							<h3 className="text-base-bold text-text-primary">
+							<h3
+								className="text-base-bold text-text-primary"
+								data-anim="letter"
+							>
 								Strategy & Execution
 							</h3>
 							<ul className="text-sm-medium text-text-secondary flex flex-col gap-2 list-none">

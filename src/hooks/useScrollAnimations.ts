@@ -39,32 +39,54 @@ export function useScrollAnimations(enabled: boolean = true) {
         animSections.forEach((secId) => {
           const sectionEl = document.querySelector(`[data-section='${secId}']`);
           if (sectionEl) {
-            const num = sectionEl.querySelector("[data-anim='sec-title-num']");
-            const text = sectionEl.querySelector("[data-anim='sec-title-text']");
-            const desc = sectionEl.querySelectorAll("[data-anim='sec-title-desc']");
+            // Select layout containers so we target the visible titles on both mobile and desktop
+            const layouts = sectionEl.querySelectorAll(".lg\\:hidden, .hidden.lg\\:grid");
+            layouts.forEach((layout) => {
+              const num = layout.querySelector("[data-anim='sec-title-num']");
+              const text = layout.querySelector("[data-anim='sec-title-text']");
+              const desc = layout.querySelectorAll("[data-anim='sec-title-desc']");
 
-            const targets: Element[] = [];
-            if (num) targets.push(num);
-            if (text) targets.push(text);
-            desc.forEach((d) => targets.push(d));
-
-            if (targets.length > 0) {
-              gsap.fromTo(targets,
-                { opacity: 0, y: 30 },
-                {
-                  opacity: 1,
-                  y: 0,
-                  duration: 0.8,
-                  stagger: 0.08,
-                  ease: "power3.out",
-                  scrollTrigger: {
-                    trigger: sectionEl,
-                    start: "top 88%",
-                    toggleActions: "play none none reverse"
+              // Section number slides in from left
+              if (num) {
+                gsap.fromTo(num,
+                  { opacity: 0, x: -40 },
+                  {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.9,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                      trigger: layout,
+                      start: "top 88%",
+                      toggleActions: "play none none reverse"
+                    }
                   }
-                }
-              );
-            }
+                );
+              }
+
+              // Section title and descriptions slide up from bottom with stagger
+              const textTargets: Element[] = [];
+              if (text) textTargets.push(text);
+              desc.forEach((d) => textTargets.push(d));
+
+              if (textTargets.length > 0) {
+                gsap.fromTo(textTargets,
+                  { opacity: 0, y: 50 },
+                  {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.12,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                      trigger: layout,
+                      start: "top 85%",
+                      toggleActions: "play none none reverse"
+                    }
+                  }
+                );
+              }
+            });
           }
         });
 
@@ -279,6 +301,8 @@ export function useScrollAnimations(enabled: boolean = true) {
         if (expertise) {
           const letters   = expertise.querySelectorAll("[data-anim='letter']");
           const listItems = expertise.querySelectorAll("[data-anim='list']");
+          const shapes    = expertise.querySelectorAll("[data-anim='expertise-shapes']");
+
           letters.forEach((letter, i) => {
             gsap.fromTo(letter,
               { opacity: 0, scale: 0.5, y: 20 },
@@ -290,6 +314,40 @@ export function useScrollAnimations(enabled: boolean = true) {
               { opacity: 0, x: 20 },
               { opacity: 1, x: 0, duration: 0.5, delay: i * 0.06, ease: "power2.out",
                 scrollTrigger: { trigger: item, start: "top 88%", toggleActions: "play none none reverse" } });
+          });
+
+          // Staggered reveal for internal shapes and scroll-scrub parallax
+          shapes.forEach((shape) => {
+            const boxes = shape.querySelectorAll("div");
+            if (boxes.length > 0) {
+              gsap.fromTo(boxes,
+                { opacity: 0, scale: 0.8, y: 30 },
+                {
+                  opacity: 1,
+                  scale: 1,
+                  y: 0,
+                  duration: 0.9,
+                  stagger: 0.1,
+                  ease: "back.out(1.5)",
+                  scrollTrigger: {
+                    trigger: shape,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                  }
+                }
+              );
+            }
+
+            gsap.to(shape, {
+              yPercent: -15,
+              ease: "none",
+              scrollTrigger: {
+                trigger: shape,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.2
+              }
+            });
           });
         }
 
