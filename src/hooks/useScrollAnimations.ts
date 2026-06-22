@@ -58,7 +58,7 @@ export function useScrollAnimations(enabled: boolean = true) {
                     scrollTrigger: {
                       trigger: layout,
                       start: "top 88%",
-                      toggleActions: "play none none reverse"
+                      once: true
                     }
                   }
                 );
@@ -81,7 +81,7 @@ export function useScrollAnimations(enabled: boolean = true) {
                     scrollTrigger: {
                       trigger: layout,
                       start: "top 85%",
-                      toggleActions: "play none none reverse"
+                      once: true
                     }
                   }
                 );
@@ -99,7 +99,7 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(mobileText,
               { opacity: 0, y: 40 },
               { opacity: 1, y: 0, duration: 0.85, ease: "power3.out",
-                scrollTrigger: { trigger: mobileText, start: "top 85%" } });
+                scrollTrigger: { trigger: mobileText, start: "top 85%", once: true } });
           }
         }
 
@@ -114,7 +114,7 @@ export function useScrollAnimations(enabled: boolean = true) {
               { opacity: 0, y: yDir, clipPath: "inset(10% 0% 10% 0%)" },
               { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.9,
                 delay: col * 0.1, ease: "power3.out",
-                scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: card, start: "top 85%", once: true } });
             const img = card.querySelector("img");
             if (img) {
               gsap.to(img, {
@@ -135,7 +135,7 @@ export function useScrollAnimations(enabled: boolean = true) {
               { opacity: 0, scale: 0.75, rotate: -4 + (i % 3) * 4 },
               { opacity: 1, scale: 1, rotate: 0, duration: 0.65, ease: "back.out(1.4)",
                 delay: (i % 4) * 0.08 + row * 0.12,
-                scrollTrigger: { trigger: logo, start: "top 88%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: logo, start: "top 88%", once: true } });
           });
         }
 
@@ -155,13 +155,13 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(text,
               { opacity: 0, y: 40, letterSpacing: "0.2em" },
               { opacity: 1, y: 0, letterSpacing: "normal", duration: 1, ease: "power3.out",
-                scrollTrigger: { trigger: cta, start: "top 75%" } });
+                scrollTrigger: { trigger: cta, start: "top 75%", once: true } });
           }
           if (btn) {
             gsap.fromTo(btn,
               { opacity: 0, y: 20, scale: 0.9 },
               { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.7)", delay: 0.4,
-                scrollTrigger: { trigger: cta, start: "top 70%" } });
+                scrollTrigger: { trigger: cta, start: "top 70%", once: true } });
           }
         }
 
@@ -173,7 +173,7 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(post,
               { opacity: 0, y: 60, clipPath: "inset(0% 0% 100% 0%)" },
               { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 1, ease: "expo.out", delay: i * 0.15,
-                scrollTrigger: { trigger: post, start: "top 85%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: post, start: "top 85%", once: true } });
             const img = post.querySelector("img");
             if (img) {
               gsap.to(img, {
@@ -276,19 +276,19 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(num,
               { opacity: 0, x: -40 },
               { opacity: 1, x: 0, duration: 0.9, ease: "power3.out",
-                scrollTrigger: { trigger: whoWeAre, start: "top 80%" } });
+                scrollTrigger: { trigger: whoWeAre, start: "top 80%", once: true } });
           }
           cols.forEach((col, i) => {
             gsap.fromTo(col,
               { opacity: 0, y: 50 },
               { opacity: 1, y: 0, duration: 0.8, delay: i * 0.12, ease: "power3.out",
-                scrollTrigger: { trigger: whoWeAre, start: "top 75%" } });
+                scrollTrigger: { trigger: whoWeAre, start: "top 75%", once: true } });
           });
           if (img) {
             gsap.fromTo(img,
               { opacity: 0, scale: 0.88, y: 30 },
               { opacity: 1, scale: 1, y: 0, duration: 1.1, ease: "expo.out",
-                scrollTrigger: { trigger: whoWeAre, start: "top 70%" } });
+                scrollTrigger: { trigger: whoWeAre, start: "top 70%", once: true } });
             gsap.to(img, {
               yPercent: -12, ease: "none",
               scrollTrigger: { trigger: whoWeAre, start: "top bottom", end: "bottom top", scrub: 1.5 },
@@ -307,13 +307,13 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(letter,
               { opacity: 0, scale: 0.5, y: 20 },
               { opacity: 1, scale: 1, y: 0, duration: 0.6, delay: 0.2 + i * 0.15, ease: "back.out(1.7)",
-                scrollTrigger: { trigger: letter, start: "top 85%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: letter, start: "top 85%", once: true } });
           });
           listItems.forEach((item, i) => {
             gsap.fromTo(item,
               { opacity: 0, x: 20 },
               { opacity: 1, x: 0, duration: 0.5, delay: i * 0.06, ease: "power2.out",
-                scrollTrigger: { trigger: item, start: "top 88%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: item, start: "top 88%", once: true } });
           });
 
           // Staggered reveal for internal shapes and scroll-scrub parallax
@@ -332,7 +332,7 @@ export function useScrollAnimations(enabled: boolean = true) {
                   scrollTrigger: {
                     trigger: shape,
                     start: "top 85%",
-                    toggleActions: "play none none reverse"
+                    once: true
                   }
                 }
               );
@@ -362,26 +362,26 @@ export function useScrollAnimations(enabled: boolean = true) {
           gsap.fromTo(footerLeft,
             { opacity: 0, x: -60 },
             { opacity: 1, x: 0, duration: 0.9, ease: "power3.out",
-              scrollTrigger: { trigger: footerLeft, start: "top 88%" } });
+              scrollTrigger: { trigger: footerLeft, start: "top 88%", once: true } });
         }
         if (footerRight) {
           gsap.fromTo(footerRight,
             { opacity: 0, x: 60 },
             { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.1,
-              scrollTrigger: { trigger: footerRight, start: "top 88%" } });
+              scrollTrigger: { trigger: footerRight, start: "top 88%", once: true } });
         }
         if (footerCard) {
           gsap.fromTo(footerCard,
             { opacity: 0, y: 40, rotate: 3 },
             { opacity: 1, y: 0, rotate: 0, duration: 0.85, ease: "back.out(1.4)", delay: 0.25,
-              scrollTrigger: { trigger: footerCard, start: "top 85%" } });
+              scrollTrigger: { trigger: footerCard, start: "top 85%", once: true } });
         }
         if (footerBtns) {
           const btns = footerBtns.querySelectorAll("button");
           gsap.fromTo(btns,
             { opacity: 0, y: 20, scale: 0.9 },
             { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.7)", stagger: 0.1, delay: 0.4,
-              scrollTrigger: { trigger: footerBtns, start: "top 90%" } });
+              scrollTrigger: { trigger: footerBtns, start: "top 90%", once: true } });
         }
         if (footerRoot) {
           const footerImgs = footerRoot.querySelectorAll("[data-anim='footer-left'] img");
@@ -434,7 +434,7 @@ export function useScrollAnimations(enabled: boolean = true) {
               { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)",
                 duration: 0.65, ease: "expo.out",
                 delay: (i % 2) * 0.1,
-                scrollTrigger: { trigger: card, start: "top 90%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: card, start: "top 90%", once: true } });
           });
         }
 
@@ -446,7 +446,7 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(mobileBlock,
               { opacity: 0, y: 30 },
               { opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
-                scrollTrigger: { trigger: mobileBlock, start: "top 88%" } });
+                scrollTrigger: { trigger: mobileBlock, start: "top 88%", once: true } });
           }
         }
 
@@ -458,7 +458,7 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(el,
               { opacity: 0, y: 25 },
               { opacity: 1, y: 0, duration: 0.6, ease: "power2.out", delay: i * 0.08,
-                scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: el, start: "top 88%", once: true } });
           });
         }
 
@@ -469,7 +469,7 @@ export function useScrollAnimations(enabled: boolean = true) {
           gsap.fromTo(mobileLogos,
             { opacity: 0, scale: 0.85 },
             { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.4)", stagger: 0.07,
-              scrollTrigger: { trigger: cases, start: "top 85%" } });
+              scrollTrigger: { trigger: cases, start: "top 85%", once: true } });
         }
 
         /* ── FOOTER mobile ── */
@@ -479,7 +479,7 @@ export function useScrollAnimations(enabled: boolean = true) {
           gsap.fromTo(children,
             { opacity: 0, y: 30 },
             { opacity: 1, y: 0, duration: 0.7, ease: "power3.out", stagger: 0.1,
-              scrollTrigger: { trigger: footerMobile, start: "top 88%" } });
+              scrollTrigger: { trigger: footerMobile, start: "top 88%", once: true } });
         }
 
         /* ── JOURNAL mobile posts ── */
@@ -490,7 +490,7 @@ export function useScrollAnimations(enabled: boolean = true) {
             gsap.fromTo(post,
               { opacity: 0, y: 50, clipPath: "inset(0% 0% 100% 0%)" },
               { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.95, ease: "expo.out", delay: i * 0.1,
-                scrollTrigger: { trigger: post, start: "top 90%", toggleActions: "play none none reverse" } });
+                scrollTrigger: { trigger: post, start: "top 90%", once: true } });
             const img = post.querySelector("img");
             if (img) {
               gsap.to(img, {
